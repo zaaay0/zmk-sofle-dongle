@@ -49,23 +49,143 @@
         tap-ms = <30>;
     };
 
+    TD_CAPS_LSFT: TD_CAPS_LSFT {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_CAPS_LSFT";
+        #binding-cells = <0>;
+        bindings = <&kp CAPS>, <&kp LSHIFT>;
+    };
+
+    HT_AS: HT_AS {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_AS";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "hold-preferred";
+    };
+
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        softoff {
+            bindings = <&soft_off>;
+            key-positions = <14 28 40>;
+        };
+
+        CB_ENT {
+            bindings = <&kp ENTER>;
+            key-positions = <47 48>;
+        };
+
+        CB_EQUAL {
+            bindings = <&as LS(EQUAL) EQUAL>;
+            key-positions = <22 23>;
+        };
+
+        CB_MINUS {
+            bindings = <&as LS(MINUS) MINUS>;
+            key-positions = <35 36>;
+        };
+
+        CB_SCRIPTLET_O {
+            bindings = <&MC_SCRIPTLET_O>;
+            key-positions = <48 50>;
+        };
+
+        CB_SCRIPTLET_C {
+            bindings = <&MC_SCRIPTLET_C>;
+            key-positions = <49 50>;
+        };
+
+        CB_LANG {
+            bindings = <&as LANG_HANJA RALT>;
+            key-positions = <29 30>;
+            timeout-ms = <60>;
+        };
+
+        CB_BKSP {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <34 35>;
+        };
+
+        CB_DEL {
+            bindings = <&kp DEL>;
+            key-positions = <21 22>;
+        };
+    };
+
+    macros {
+        MC_SCRIPTLET_O: MC_SCRIPTLET_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp PRCNT>;
+            label = "MC_SCRIPTLET_O";
+        };
+
+        MC_SCRIPTLET_C: MC_SCRIPTLET_C {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT &kp GT>;
+            label = "MC_SCRIPTLET_C";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        layer0 {
+        L_BASE {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC             &as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &kp UP_ARROW     &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8        &as LS(N9) N9           &as LS(N0) N0      &kp BACKSPACE
+&kp TAB             &as LS(Q) Q    &as LS(W) W    &as LS(E) E    &as LS(R) R    &as LS(T) T      &kp DOWN_ARROW   &as LS(Y) Y    &as LS(U) U    &as LS(I) I          &as LS(O) O             &as LS(P) P        &as LS(BSLH) BSLH
+&HT_AS LSHIFT CAPS  &as LS(A) A    &as LS(S) S    &as LS(D) D    &as LS(F) F    &as LS(G) G      &kp LEFT_ARROW   &as LS(H) H    &as LS(J) J    &as LS(K) K          &as LS(L) L             &as LS(SEMI) SEMI  &as LS(APOS) APOS
+&kp LCTRL           &as LS(Z) Z    &as LS(X) X    &as LS(C) C    &as LS(V) V    &as LS(B) B      &kp RIGHT_ARROW  &as LS(N) N    &as LS(M) M    &as LS(COMMA) COMMA  &as LS(DOT) DOT         &as LS(FSLH) FSLH  &as LS(GRAVE) GRAVE
+&kp C_MUTE          &kp LALT       &kp LEFT_GUI   &kp ENTER      &mo 2          &kp SPACE        &kp ENTER        &kp ENTER      &mo 2          &kp SPACE            &HT_AS RALT LANG_HANJA  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "L_BASE";
         };
 
-        layer_1 {
+        L_NO_ASFT {
+            bindings = <
+&kp ESC             &kp N1    &kp N2        &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7  &kp N8     &kp N9                  &kp N0    &kp BACKSPACE
+&kp TAB             &kp Q     &kp W         &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U   &kp I      &kp O                   &kp P     &kp BSLH
+&HT_AS LSHIFT CAPS  &kp A     &kp S         &kp D      &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J   &kp K      &kp L                   &kp SEMI  &kp APOS
+&kp LCTRL           &kp Z     &kp X         &kp C      &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M   &kp COMMA  &kp DOT                 &kp FSLH  &kp GRAVE
+&kp C_MUTE          &kp LALT  &kp LEFT_GUI  &kp ENTER  &mo 2   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2   &kp SPACE  &HT_AS RALT LANG_HANJA  &kp DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            display-name = "L_NO_ASFT";
+        };
+
+        L_RAISE {
+            bindings = <
+&kp F11              &kp F1          &kp F2          &kp F3           &kp F4     &kp F5    &trans  &kp F6  &kp F7    &kp F8    &kp F9     &kp F10      &kp F12
+&as LS(GRAVE) GRAVE  &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP  &trans    &trans  &trans  &kp HOME  &kp UP    &kp END    &kp PAGE_UP  &as LS(LEFT_BRACKET) LEFT_BRACKET
+&trans               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN  &trans    &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &as LS(RIGHT_BRACKET) RIGHT_BRACKET
+&trans               &kp K_MUTE      &kp C_VOL_DN    &kp C_VOL_UP     &trans     &trans    &trans  &trans  &trans    &trans    &trans     &trans       &trans
+&trans               &trans          &trans          &trans           &trans     &trans    &trans  &trans  &trans    &mo 3     &mo 4      &tog 1
+            >;
+
+            display-name = "L_RAISE";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        L_M1 {
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
@@ -74,11 +194,11 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
+            display-name = "L_M1";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_2 {
+        L_M2 {
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
@@ -87,17 +207,8 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
+            display-name = "L_M2";
             sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
