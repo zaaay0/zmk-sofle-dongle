@@ -141,7 +141,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        L_BASE {
+        BASE {
             bindings = <
 &kp ESC             &as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &kp UP_ARROW     &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8        &as LS(N9) N9           &as LS(N0) N0      &kp BACKSPACE
 &kp TAB             &as LS(Q) Q    &as LS(W) W    &as LS(E) E    &as LS(R) R    &as LS(T) T      &kp DOWN_ARROW   &as LS(Y) Y    &as LS(U) U    &as LS(I) I          &as LS(O) O             &as LS(P) P        &as LS(BSLH) BSLH
@@ -151,10 +151,10 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "L_BASE";
+            display-name = "BASE";
         };
 
-        L_NO_ASFT {
+        NO_ASFT {
             bindings = <
 &kp ESC             &kp N1    &kp N2        &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7  &kp N8     &kp N9                  &kp N0    &kp BACKSPACE
 &kp TAB             &kp Q     &kp W         &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U   &kp I      &kp O                   &kp P     &kp BSLH
@@ -164,10 +164,10 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "L_NO_ASFT";
+            display-name = "NO_ASFT";
         };
 
-        L_RAISE {
+        RAISE {
             bindings = <
 &kp F11              &kp F1          &kp F2          &kp F3           &kp F4     &kp F5    &trans  &kp F6  &kp F7    &kp F8    &kp F9     &kp F10      &kp F12
 &as LS(GRAVE) GRAVE  &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP  &trans    &trans  &trans  &kp HOME  &kp UP    &kp END    &kp PAGE_UP  &as LS(LEFT_BRACKET) LEFT_BRACKET
@@ -176,11 +176,11 @@
 &trans               &trans          &trans          &trans           &trans     &trans    &trans  &trans  &trans    &mo 3     &mo 4      &tog 1
             >;
 
-            display-name = "L_RAISE";
+            display-name = "RAISE";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        L_M1 {
+        M1 {
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
@@ -189,11 +189,11 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "L_M1";
+            display-name = "M1";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        L_M2 {
+        M2 {
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
@@ -202,7 +202,7 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            display-name = "L_M2";
+            display-name = "M2";
             sensor-bindings = <&scroll_encoder>;
         };
     };
