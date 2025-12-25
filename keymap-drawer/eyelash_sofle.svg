@@ -298,8 +298,8 @@ rect.held, rect.combo.held {
   visibility: hidden;
 }
 </style>
-<g transform="translate(40, 0)" class="layer-L_BASE">
-<text x="0" y="28" class="label" id="L_BASE">L_BASE:</text>
+<g transform="translate(40, 0)" class="layer-BASE">
+<text x="0" y="28" class="label" id="BASE">BASE:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -644,8 +644,8 @@ rect.held, rect.combo.held {
 <g transform="translate(314, 283) rotate(30.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_RAISE">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">L_RAISE</tspan></text>
+<a href="#RAISE">
+<text x="0" y="-4" class="key tap layer-activator">RAISE</text>
 </a></g>
 <g transform="translate(389, 294) rotate(30.0)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -665,8 +665,8 @@ rect.held, rect.combo.held {
 <g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_RAISE">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">L_RAISE</tspan></text>
+<a href="#RAISE">
+<text x="0" y="-4" class="key tap layer-activator">RAISE</text>
 </a></g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -732,8 +732,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 388)" class="layer-L_NO_ASFT">
-<text x="0" y="28" class="label" id="L_NO_ASFT">L_NO_ASFT:</text>
+<g transform="translate(40, 388)" class="layer-NO_ASFT">
+<text x="0" y="28" class="label" id="NO_ASFT">NO_ASFT:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1035,8 +1035,8 @@ rect.held, rect.combo.held {
 <g transform="translate(314, 283) rotate(30.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_RAISE">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">L_RAISE</tspan></text>
+<a href="#RAISE">
+<text x="0" y="-4" class="key tap layer-activator">RAISE</text>
 </a></g>
 <g transform="translate(389, 294) rotate(30.0)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1056,8 +1056,8 @@ rect.held, rect.combo.held {
 <g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_RAISE">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">L_RAISE</tspan></text>
+<a href="#RAISE">
+<text x="0" y="-4" class="key tap layer-activator">RAISE</text>
 </a></g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1123,8 +1123,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 776)" class="layer-L_RAISE">
-<text x="0" y="28" class="label" id="L_RAISE">L_RAISE:</text>
+<g transform="translate(40, 776)" class="layer-RAISE">
+<text x="0" y="28" class="label" id="RAISE">RAISE:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1444,20 +1444,20 @@ rect.held, rect.combo.held {
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_M1">
-<text x="0" y="-4" class="key tap layer-activator">L_M1</text>
+<a href="#M1">
+<text x="0" y="-4" class="key tap layer-activator">M1</text>
 </a></g>
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_M2">
-<text x="0" y="-4" class="key tap layer-activator">L_M2</text>
+<a href="#M2">
+<text x="0" y="-4" class="key tap layer-activator">M2</text>
 </a></g>
 <g transform="translate(784, 259)" class="key keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#L_NO_ASFT">
-<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 67%">L_NO_ASFT</tspan></text>
+<a href="#NO_ASFT">
+<text x="0" y="-4" class="key tap layer-activator"><tspan style="font-size: 86%">NO_ASFT</tspan></text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g class="combo combopos-0">
@@ -1506,8 +1506,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1165)" class="layer-L_M1">
-<text x="0" y="28" class="label" id="L_M1">L_M1:</text>
+<g transform="translate(40, 1165)" class="layer-M1">
+<text x="0" y="28" class="label" id="M1">M1:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1904,8 +1904,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1553)" class="layer-L_M2">
-<text x="0" y="28" class="label" id="L_M2">L_M2:</text>
+<g transform="translate(40, 1553)" class="layer-M2">
+<text x="0" y="28" class="label" id="M2">M2:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>

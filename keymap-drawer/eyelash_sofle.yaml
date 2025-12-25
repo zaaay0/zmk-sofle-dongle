@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  L_BASE:
+  BASE:
   - $$mdi:keyboard-esc$$
   - {t: '1', h: Sft+1, s: '!'}
   - {t: '2', h: Sft+2, s: '@'}
@@ -57,15 +57,15 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - L_RAISE
+  - RAISE
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - L_RAISE
+  - RAISE
   - $$mdi:keyboard-space$$
   - {t: LANG HANJA, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:backspace-reverse-outline$$
-  L_NO_ASFT:
+  NO_ASFT:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -122,15 +122,15 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - L_RAISE
+  - RAISE
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - L_RAISE
+  - RAISE
   - $$mdi:keyboard-space$$
   - {t: LANG HANJA, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:backspace-reverse-outline$$
-  L_RAISE:
+  RAISE:
   - F11
   - F1
   - F2
@@ -192,10 +192,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - L_M1
-  - L_M2
-  - {t: L_NO_ASFT, h: toggle}
-  L_M1:
+  - M1
+  - M2
+  - {t: NO_ASFT, h: toggle}
+  M1:
   - {t: '`', s: '~'}
   - F1
   - F2
@@ -260,7 +260,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  L_M2:
+  M2:
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
